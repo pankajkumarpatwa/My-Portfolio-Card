@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio Card @pnkj !</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+           background: #c32252;
+           background: linear-gradient(0deg, rgba(195, 34, 82, 1) 11%, rgba(253, 187, 45, 1) 84%); /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px; /* Add some padding for smaller screens */
+            box-sizing: border-box;
+        }
+
+        /* Custom styles for the card, overriding some Tailwind defaults for specific effects */
+        .portfolio-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px) scale(1.02); /* Lift and slightly enlarge on hover */
+            box-shadow: 0 20px 30px rgb(0, 0, 0); /* More pronounced shadow */
+            background-color: #ffffff; /* Light background on hover */
+        }
+
+        .profile-image {
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease-in-out;
+            }
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 640px) {
+            .portfolio-card {
+                width: 100%; /* Full width on small screens */
+                max-width: 320px; /* Limit max width for better readability */
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="portfolio-card w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden md:max-w-md lg:max-w-lg">
+        <div class="relative">
+            <!-- Profile image with placeholder and error handling -->
+            <img class="profile-image w-full h-48 sm:h-56 md:h-64 object-cover"
+                 src="https://static.wixstatic.com/media/13b6aa_2f71d9b0b5e8402bb6abab4865f54166~mv2.jpg/v1/fill/w_396,h_390,fp_0.54_0.47,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Programming.jpg"
+                 alt="Profile Picture"
+                 onerror="this.onerror=null;this.src='https://static.wixstatic.com/media/13b6aa_2f71d9b0b5e8402bb6abab4865f54166~mv2.jpg/v1/fill/w_396,h_390,fp_0.54_0.47,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Programming.jpg';">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50"></div>
+        </div>
+
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Hii, there !</h2>
+            <p class="text-md text-blue-600 font-medium mb-4"> A Passionate Web Developer.</p><p class="text-sm text-gray-600 mb-4">Welcome to my portfolio! I'm Pankaj Kumar Patwa, an aspiring software developer with a passion for creating clean and efficient web applications. Explore my work and connect with me!</p>
+
+            <div class="text-gray-700 leading-relaxed mb-6">
+                <h3 class="text-md text-red-500 font-semibold mb-4">Aspiring Software Developer | Web Developer Expert | Design Enthusiast for in Figma, Wix Studio & Canva.</h3>
+                <p>🚀 Beginner Dev. Big Dreams.</p>
+                <p>💻 Building clean websites with passion & purpose.</p>
+                <p>✨ Ready for real-world challenges.</p>
+                <p>🌟 Let's create something amazing together!</p>
+                <p>💬 Open to collaborations and new ideas.</p>
+                <p>🤝 Let's connect and build something great!</p>
+            </div>
+
+            <div class="flex justify-center space-x-6 text-gray-600">
+                <!-- Social Media Links -->
+                <a href="mailto:ppatwa455@gmail.com" class="hover:text-blue-500 transition-colors duration-200" title="ppatwa455@gmail.com">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/pnkj.ptwaa.01_/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-200" title="instagram">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pankaj-kumar-patwa-624907305/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-200" title="LinkedIn">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/pankajkumarpatwa" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-200" title="GitHub">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://x.com/ppatwa455" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-200" title="X (formerly Twitter)">
+                    <i class="fab fa-x text-2xl"></i>
+                </a>
+                <a href="https://ppatwa455.wixstudio.com/myportfolio1327info" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-200" title="Wix Portfolio">
+                    <i class="fab fa-wix text-2xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Basic JavaScript for potential future interactions, though not strictly needed for this hover effect.
+        // You can add more complex functionality here if required later.
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Portfolio card; Developer by --pnkj!');
+            // Example: You could add dynamic content loading or other interactions here.
+        });
+    </script>
+</body>
+</html>
